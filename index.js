@@ -29,7 +29,7 @@ client.on('messageReactionAdd', async (reaction, user) => {
     }
     //another user must send a new map for it to reset values
 
-    let limit = 2; // number of thumbsdown reactions you need
+    let limit = 6; // number of thumbsdown reactions you need
     if (reaction.count == limit && reaction.emoji.id == "703046302824398939" && userFailed == false) {
         if(`${reaction.message.id}` !== `${messageID}`) {
             let userWon = false;
@@ -38,7 +38,6 @@ client.on('messageReactionAdd', async (reaction, user) => {
     try {
     userWon = true;
     userFailed = false;
-    console.log(`${reaction.emoji.id}`)
        await reaction.message.react("704418372850286682");
        await reaction.message.author.send("your map is under review and will be looked at");
        messageID = `${reaction.message.id}`;
