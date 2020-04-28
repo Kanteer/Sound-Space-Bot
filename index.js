@@ -10,7 +10,7 @@ client.on("ready", () => {
 
 client.on("message", async message => {
     if(`${message.channel.id}` === "641420152168120320" || `${message.channel.id}` === "703050951648346184" )
-if(message.content.startsWith("https://raw.github")) {
+if(message.content.startsWith("https://raw.github") || message.content.startsWith("https://github")) {
     message.react('703046302824398939') 
     message.react('703045879959126146') 
 } else {
