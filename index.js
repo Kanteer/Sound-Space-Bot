@@ -22,12 +22,9 @@ if(message.content.startsWith("https://raw.github") || message.content.startsWit
 
 
 client.on('messageReactionAdd', async (reaction, user) => {
-    console.log("hi")
-    let limit = 2; // number of thumbsdown reactions you need
+    let limit = 6; // number of thumbsdown reactions you need
     if (reaction.count == limit) {
-        console.log("limit")
         if(`${reaction.message.id}` !== `${messageID}`) {
-        console.log("bro")
         
         //send a message to a different channel here
 
