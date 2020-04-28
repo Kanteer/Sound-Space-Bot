@@ -9,23 +9,23 @@ client.on("ready", () => {
 });
 
 client.on("message", async message => {
-if(`${message.channel.id}` === "704410454360850522") {
-if(message.content.startsWith("http")) {
-    message.react('704418951635009547') 
-    message.react('704418951655850014') 
+    if(`${message.channel.id}` === "641420152168120320" || `${message.channel.id}` === "703050951648346184" )
+if(message.content.startsWith("https://raw.github")) {
+    message.react('703046302824398939') 
+    message.react('703045879959126146') 
 } else {
     try { if(`${message.author.id}` === `${client.user.id}`) {return;} else { await message.delete(); } } catch(e) {return;}
     return;
 }
 }
-});
+);
 
 
 client.on('messageReactionAdd', async (reaction, user) => {
-    let limit = 2; // number of thumbsdown reactions you need
+    let limit = 6; // number of thumbsdown reactions you need
     if (reaction.count === limit) {
         if(`${reaction.message.id}` !== `${messageID}`) {
-        await reaction.message.channel.send(`<@${reaction.message.author.id}> you won`);
+        await reaction.message.channel.send(`<@${reaction.message.author.id}> Map will go to moderation.`);
         messageID = `${reaction.message.id}`;
         return;
         }
